@@ -1,0 +1,44 @@
+html {
+  --color-focus: var(--color-blue);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  width: 100vw;
+  overflow-x: hidden;
+
+  &.front-page {
+    --color-background: var(--color-black);
+    --color-text: var(--color-white);
+  }
+}
+
+*:focus {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+body {
+  --color-background: transparent;
+
+  & > svg {
+    display: none;
+  }
+}
+
+* {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+main {
+  padding: $spacing--xlarge 0;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

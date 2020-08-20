@@ -1,0 +1,15 @@
+name: Remind Creative
+type: theme
+description: "A custom theme for Remind Creative"
+core: 8.x
+libraries:
+  - remind/global
+base theme: stable
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+  offcanvas: Offcanvas
+
+ckeditor_stylesheets:
+  - assets/css/main.css

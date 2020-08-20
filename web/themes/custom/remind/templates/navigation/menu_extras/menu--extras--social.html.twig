@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - content.children: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - content: The field item content.
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+{% import _self as menu %}
+
+{{ menu.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menu_links %}
+
+  <ul class="menu menu-level-{{ items|first.menu_level }}">
+  {% for key, item in items if key|first != '#' %}
+
+    {% set item_classes = [
+      'menu-item',
+      item.in_active_trail ? 'active-trail',
+    ] %}
+
+    {% set link_classes = [
+      'menu-link'
+    ] %}
+
+    {% set rendered_content = item.content|without('') %}
+    {% set markup %}{% spaceless %}
+      {% if rendered_content|render %}
+        {{ rendered_content }}
+      {% endif %}
+      <span class="visually-hidden">{{ item.title }}</span>
+    {% endspaceless %}{% endset %}
+
+    <li{{ item.attributes.addClass(item_classes) }}>
+      {{ link(markup, item.url, {class: link_classes}) }}
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
