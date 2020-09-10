@@ -6,6 +6,7 @@
 /profiles/contrib/
 /libraries/
 /*.*
+!/.ddev
 !composer.json
 !composer.lock
 !.gitignore

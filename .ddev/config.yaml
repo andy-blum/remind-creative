@@ -1,6 +1,6 @@
-name: remindcreative
-type: drupal8
-docroot: web
+name: stevejencks
+type: drupal9
+docroot: /
 php_version: "7.3"
 webserver_type: nginx-fpm
 router_http_port: "80"
