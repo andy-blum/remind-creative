@@ -1,0 +1,7 @@
+.position--relative {position: relative;}
+.position--absolute {position: absolute;}
+
+[class*="position--z"] {position: relative;}
+
+.position--z-up {z-index: 1;}
+.position--z-down {z-index: -1;}

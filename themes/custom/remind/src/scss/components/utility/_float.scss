@@ -1,0 +1,11 @@
+.float-left {
+  float: left;
+  margin-right: $spacing;
+  margin-bottom: $spacing--xsmall;
+}
+
+.float-right {
+  float: right;
+  margin-left: $spacing;
+  margin-bottom: $spacing--xsmall;
+}

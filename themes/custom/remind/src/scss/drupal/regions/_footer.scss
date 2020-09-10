@@ -1,0 +1,16 @@
+#region-footer {
+  --color-background: var(--color-black);
+  --color-text: var(--color-white);
+
+  padding: $spacing--large 0;
+
+  .region-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      margin: $spacing 0;
+    }
+  }
+}

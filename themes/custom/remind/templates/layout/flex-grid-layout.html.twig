@@ -1,0 +1,9 @@
+{% if content %}
+  <div {{ attributes.addClass('outer-wrapper') }}>
+  {% if content.main %}
+    <div {{ region_attributes.main.addClass('inner-wrapper').setAttribute('grid', 'large') }}>
+      {{ content.main }}
+    </div>
+  {% endif %}
+  </div>
+{% endif %}
