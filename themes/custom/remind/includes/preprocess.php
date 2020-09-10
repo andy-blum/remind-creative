@@ -67,7 +67,7 @@ function remind_preprocess_html(&$variables) {
   } else {
     // Add unique classes for each page and website section.
     $path = \Drupal::service('path.current')->getPath();
-    $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
+    $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
     $alias = trim($alias, '/');
     if (!empty($alias)) {
 
