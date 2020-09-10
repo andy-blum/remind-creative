@@ -1,0 +1,16 @@
+#block-sitebranding {
+  a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-text);
+
+    img, svg {
+      width: 65px;
+      height: 65px;
+      margin-right: $spacing;
+    }
+  }
+}

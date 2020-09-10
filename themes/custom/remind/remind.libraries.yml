@@ -1,0 +1,25 @@
+global:
+  css:
+    theme:
+      assets/css/main.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css: {type: external, minified: true}
+
+  js:
+    assets/js/scripts.min.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js: {type: external, minified: true}
+
+  dependencies:
+    - core/jquery
+
+lightgallery:
+  header: true
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css: {type: external, minified: true}
+  js:
+    https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js: {type: external, minified: true}
+    https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js: {type: external, minified: true}
+    https://cdn.jsdelivr.net/npm/lg-fullscreen.js@1.2.0/dist/lg-fullscreen.min.js: {type: external, minified: true}
+    https://cdn.jsdelivr.net/npm/lg-share@1.2.0/dist/lg-share.min.js: {type: external, minified: true}
+    https://cdn.jsdelivr.net/npm/lg-share.js@1.2.0/dist/lg-share.min.js: {type: external, minified: true}
+

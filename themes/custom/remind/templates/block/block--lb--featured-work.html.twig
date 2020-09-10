@@ -1,0 +1,10 @@
+<div{{ attributes.addClass('width--1-1') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  <div class="width-child--1-1 width-child--1-2@m" grid="small">
+    {{ content }}
+  </div>
+</div>

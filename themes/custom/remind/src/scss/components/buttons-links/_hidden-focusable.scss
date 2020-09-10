@@ -1,0 +1,17 @@
+.visually-hidden.focusable {
+  display: block;
+  transition-property: background, color;
+  transition-duration: 0.25s;
+  &:focus {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    clip-path: none;
+    margin: 0;
+    clip: unset;
+    height: auto;
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: 1.25rem;
+  }
+}
