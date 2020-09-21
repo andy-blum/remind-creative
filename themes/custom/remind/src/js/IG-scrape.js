@@ -4,7 +4,6 @@
 
       context.querySelectorAll('.ig-profile').forEach(block => {
         const username = block.dataset.username;
-        console.log(`Loading Profile @${username}`);
 
         getIGPosts(username)
           .then(posts => {
@@ -15,7 +14,6 @@
             grid.classList.add("width-child--1-4@l");
 
             posts.forEach((post, i) => {
-              console.log(post);
               if (i < 8) {
                 grid.insertAdjacentHTML('beforeEnd', `
                   <div>
