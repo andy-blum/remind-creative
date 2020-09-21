@@ -1,0 +1,20 @@
+uuid: 2d7b4b99-66e2-4fe5-a537-0bed8042b8a2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - remind
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: remind_local_actions
+theme: remind
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

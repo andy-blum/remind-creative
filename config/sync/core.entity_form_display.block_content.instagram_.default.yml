@@ -1,0 +1,29 @@
+uuid: ee5addc2-7a1e-4ef7-9ff4-88bb8f31603c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram_
+    - field.field.block_content.instagram_.field_username
+id: block_content.instagram_.default
+targetEntityType: block_content
+bundle: instagram_
+mode: default
+content:
+  field_username:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

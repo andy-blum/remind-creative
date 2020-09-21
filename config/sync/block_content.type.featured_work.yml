@@ -1,0 +1,8 @@
+uuid: d5fbe7b6-9ae9-4533-89fc-5d5dce7d4499
+langcode: en
+status: true
+dependencies: {  }
+id: featured_work
+label: 'Featured Work'
+revision: 0
+description: 'Adds an image tile linking to a piece of featured work.'

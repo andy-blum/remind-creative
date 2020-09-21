@@ -1,0 +1,23 @@
+uuid: db3443f3-b2a5-4745-819c-c6fbca88aff6
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: project_types
+label: 'Project Types'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'work/[term:name]'
+selection_criteria:
+  a16efe59-2466-4d3b-b240-a0005645b207:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      project_type: project_type
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: a16efe59-2466-4d3b-b240-a0005645b207
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: 907301b1-2f8c-4f56-b4a0-a57e1021d1cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_site
+    - node.type.project
+  module:
+    - link
+id: node.project.field_link_to_site
+field_name: field_link_to_site
+entity_type: node
+bundle: project
+label: 'Link To Site'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

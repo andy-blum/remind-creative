@@ -1,0 +1,20 @@
+uuid: 30a5da72-9c52-446e-9378-dbae01d2c03d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - remind
+id: messages
+theme: remind
+region: content
+weight: -1
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: a739307e-ac7f-42bf-9cd9-d0dd8e543560
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_work
+    - field.field.block_content.featured_work.field_featurettes
+id: block_content.featured_work.default
+targetEntityType: block_content
+bundle: featured_work
+mode: default
+content:
+  field_featurettes:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

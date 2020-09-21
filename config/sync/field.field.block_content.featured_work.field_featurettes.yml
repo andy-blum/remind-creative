@@ -1,0 +1,29 @@
+uuid: 301f366b-18b0-4e70-94df-9c68c950c2f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_work
+    - field.storage.block_content.field_featurettes
+    - node.type.project
+id: block_content.featured_work.field_featurettes
+field_name: field_featurettes
+entity_type: block_content
+bundle: featured_work
+label: Featurettes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
