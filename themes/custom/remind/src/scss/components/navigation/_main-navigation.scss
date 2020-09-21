@@ -1,5 +1,6 @@
 nav#block-mainnavigation {
   position: relative;
+  overflow: hidden;
 
   a {
     padding: $spacing--small $spacing;
