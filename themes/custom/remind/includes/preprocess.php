@@ -122,15 +122,23 @@ function remind_preprocess_node(&$variables) {
   $display = $variables['view_mode'];
 
   if ($type == 'project' && $display == 'teaser') {
-    $first_image = $node->field_images->first()->getValue();
-    $imageFile = File::load($first_image['target_id'])->getFileUri();
-    $imgUrl = ImageStyle::load('large')->buildUrl($imageFile);
-    $variables['image'] = [
-      'src' => $imgUrl,
-      'alt' => $first_image['alt'],
-      'width' => $first_image['width'],
-      'height' => $first_image['height']
-    ];
+
+    if (!$node->field_images->isEmpty()) {
+      $first_image = $node->field_images->first()->getValue();
+      $imageFile = File::load($first_image['target_id'])->getFileUri();
+      $imgUrl = ImageStyle::load('large')->buildUrl($imageFile);
+      $variables['image'] = [
+        'src' => $imgUrl,
+        'alt' => $first_image['alt'],
+        'width' => $first_image['width'],
+        'height' => $first_image['height']
+      ];
+    } else {
+      $variables['image'] = [
+        'src' => '/sites/default/files/2020-07/placeholder.jpg',
+        'alt' => 'placeholder image'
+      ];
+    }
   }
 
   if ($type == 'project' && $display == 'full') {
