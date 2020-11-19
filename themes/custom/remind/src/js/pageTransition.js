@@ -1,20 +1,32 @@
-(function ($) {
-  console.log('page transition behavior');
-  debugger;
-  $(document).ready(function () {
-    $(".animsition").animsition({
-      inClass: 'fade-in-down-sm',
-      outClass: 'fade-out-up-sm',
-      inDuration: 1500,
-      outDuration: 800,
-      linkElement: 'a:not([target="_blank"]):not([href^="#"]):not([href=""])',
-      loading: false,
-      onLoadEvent: true,
-      browser: ['animation-duration', '-webkit-animation-duration'],
-      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-      overlay: false,
-      transition: function (url) { window.location.href = url; }
-    });
-  });
-})(jQuery);
+(function(){
+  Drupal.behaviors.pageTransition= {
+    attach: function (context, settings) {
+
+      window.addEventListener('load', function(e) {
+        const body = document.querySelector('body');
+        body.style.transition = 'all 0.5s ease-in-out';
+        setTimeout(function(){
+          document.querySelector('body').classList.add('visible');
+        }, 500);
+      });
+
+      const linksOut = Array.prototype.slice.call(
+        context.querySelectorAll(
+          'a:not([target="_blank"]):not([href^="#"]):not([href=""])'
+        )
+      );
+
+      linksOut.forEach(function(link) {
+        link.addEventListener('click', function(e){
+          e.preventDefault();
+
+          document.querySelector('body').classList.remove('visible');
+
+          setTimeout(function() {
+            window.location = link.href;
+          }, 500);
+        });
+      });
+    }
+  };
+})();

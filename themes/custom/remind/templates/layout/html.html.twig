@@ -24,8 +24,11 @@
  */
 #}
 <!DOCTYPE html>
-<html{{ html_attributes.addClass('animsition') }}>
+<html{{ html_attributes.addClass('no-js') }}>
   <head>
+    <script>
+      document.documentElement.classList.remove('no-js');
+    </script>
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">

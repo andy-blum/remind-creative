@@ -9,6 +9,16 @@ html {
     --color-background: var(--color-black);
     --color-text: var(--color-white);
   }
+
+  &:not(.no-js) body {
+    opacity: 0;
+    transform: translateY(-50px);
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
 
 *:focus {
