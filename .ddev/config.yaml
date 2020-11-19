@@ -14,6 +14,11 @@ provider: default
 use_dns_when_possible: true
 composer_version: ""
 
+hooks:
+  post-start:
+  - exec: sudo echo 'PS1="\[\e[1;33m\]\w \$\[\e[0m\] "' >> ~/.bashrc
+  - exec: sudo ln -s /var/www/html /html
+
 
 # This config.yaml was created with ddev version v1.16.0
 # webimage: drud/ddev-webserver:v1.16.0
