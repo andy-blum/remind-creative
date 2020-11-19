@@ -1,0 +1,8 @@
+uuid: 8908cbc2-29d7-476e-b2d0-9f118347b6f4
+langcode: en
+status: true
+dependencies: {  }
+id: body_text
+label: 'Body Text'
+revision: 1
+description: 'Provides a WYSIWYG field to enter formatted text and some images'

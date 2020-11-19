@@ -1,0 +1,19 @@
+uuid: 828dc6dc-4673-4741-a4fd-8321e075dcc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram_
+    - field.storage.block_content.field_username
+id: block_content.instagram_.field_username
+field_name: field_username
+entity_type: block_content
+bundle: instagram_
+label: Username
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

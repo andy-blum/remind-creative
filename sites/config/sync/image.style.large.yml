@@ -1,0 +1,17 @@
+uuid: 99dea5b3-eeb7-444f-823e-bfd6529a2024
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: J2n0RpFzS0-bgSyxjs6rSdgxB1rb-bTAgqywNx_964M
+name: large
+label: 'Large (500x500)'
+effects:
+  c50970b8-722f-4322-a1ef-a0e396740d48:
+    uuid: c50970b8-722f-4322-a1ef-a0e396740d48
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 500
+      height: 500
+      anchor: center-center

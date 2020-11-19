@@ -1,0 +1,30 @@
+uuid: 7a8c1f4d-350b-472c-8a53-1744102f2dbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - menu_link_content
+id: menu_link_content.field_icon
+field_name: field_icon
+entity_type: menu_link_content
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

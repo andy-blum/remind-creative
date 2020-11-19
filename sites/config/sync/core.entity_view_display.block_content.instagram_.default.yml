@@ -1,0 +1,21 @@
+uuid: 525f9ee2-d97e-45f9-b5a2-b2f49a301b79
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram_
+    - field.field.block_content.instagram_.field_username
+id: block_content.instagram_.default
+targetEntityType: block_content
+bundle: instagram_
+mode: default
+content:
+  field_username:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

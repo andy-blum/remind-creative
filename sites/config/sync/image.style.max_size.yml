@@ -1,0 +1,15 @@
+uuid: 858d07f4-7588-44fe-8a81-6e4c4e261681
+langcode: en
+status: true
+dependencies: {  }
+name: max_size
+label: max-size
+effects:
+  db7386d9-b440-4c39-84f0-940dcb7b7ff8:
+    uuid: db7386d9-b440-4c39-84f0-940dcb7b7ff8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1500
+      height: 1500
+      anchor: center-center
